@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types'
 import { useState } from 'react';
-import './SelectorPlugin.css'
+import './Selector.css'
 
 export default function SelectMenu({labelName, options, onChange}){
     const [isOpen, setIsOpen ] = useState(false);
@@ -19,11 +19,11 @@ export default function SelectMenu({labelName, options, onChange}){
   return(
     <>
       <div className='selector'> 
-          <label  className='selector-btn bg-dark text-light' 
+          <label  className='selector-btn' 
                   htmlFor={labelName}
                   onClick={toggleList}>{labelvalue}<div className='selector-icon'></div></label>
           { isOpen && (
-            <ul className='selector-list bg-light b-shadow'>
+            <ul className='selector-list'>
               { options.map((option, index) =>(
               <li key={index} className='selector-item' onClick={() => {handleOnClick(option)}}>{option}</li>
               ))}
