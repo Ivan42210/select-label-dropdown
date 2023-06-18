@@ -127,8 +127,8 @@ This component is released under the MIT License.
 
 ## Contributing
 
-Contributions to the `select-label-dropdown` package are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-repo).
+Contributions to the `select-label-dropdown` package are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/Ivan42210/select-label-dropdown.git).
 
 ## Credits
 
-The `select-label-dropdown
+The `select-label-dropdown` by Ivan Chavaren
