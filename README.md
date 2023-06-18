@@ -38,6 +38,64 @@ The `SelectMenu` component accepts the following props:
 - `options` (array of strings, required): The options to display in the dropdown menu.
 - `onChange` (function, required): A callback function triggered when an option is selected. It receives the selected option as a parameter.
 
+## Styling
+
+The SelectMenu plugin comes with basic styling. You can customize the appearance by modifying the CSS classes provided. Here's an explanation of the CSS classes and their styles:
+
+- `.selector`: The container for the SelectMenu component.
+- `.selector-btn`: The style for the label button that triggers the dropdown menu.
+- `.selector-list`: The style for the dropdown menu.
+- `.selector-item`: The style for each item in the dropdown menu.
+- `.selector-icon`: The style for the icon displayed in the label button.
+
+Feel free to modify and customize these styles to match your desired design. You can override the styles or add your own hover styles as needed.
+
+```css
+/* Here is the plug-in's basic style. Feel free to customize it as you need */
+
+.selector {
+    position: relative;
+    height: auto;
+}
+
+.selector-btn {
+    padding: 7px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selector-list {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.selector-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*
+Make your own hover style here
+
+.selector-item:hover {
+    background: var(--dark);
+    color: var(--light);
+}*/
+
+.selector-icon {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid black;
+}
+```
+
 ## Example
 
 Here's an example of using the SelectMenu plugin:
@@ -71,3 +129,4 @@ export default App;
 This plugin is released under the [MIT License](https://opensource.org/licenses/MIT).
 ```
 
+Please note that the styling code provided should be added to your project's CSS file or styled components for the styles to take effect.
