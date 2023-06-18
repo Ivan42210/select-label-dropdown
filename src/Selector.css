@@ -1,46 +1,41 @@
-/*Here the plug in basic style, feel free to custom it as you need*/
-
-.selector {
+.mbic-selector {
     position: relative;
     height: auto;
 }
 
-.selector-btn {
+.mbic-selector-btn {
     padding: 7px;
-    background: whitesmoke;
-    border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: black;
+    color: white;
 }
 
-.selector-list {
+.mbic-selector-list {
     position: absolute;
     z-index: 999;
     width: 100%;
-    background: whitesmoke;
-    border: solid 1px black;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.selector-item {
+.mbic-selector-item {
     padding: 10px;
     cursor: pointer;
 }
 
-/*
-Make your own hover style here
-
-.selector-item:hover {
+.mbic-selector-item:hover {
     background: black;
-    color: whitesmoke;
-}*/
+    color: white;
+}
 
-.selector-icon {
+.mbic-selector-icon {
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid black;
+    border-top: 8px solid white;
 }

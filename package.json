@@ -2,10 +2,10 @@
     "name": "select-label-dropdown",
     "version": "1.0.0",
     "description": "A simple label plugin with a dropdown menu to select options for forms.",
-    "main": "dist/Selector.jsx",
+    "main": "dist/Selector.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "babel src -d dist"
+        "build": "babel src -d dist && cpy src/Selector.css dist"
     },
     "repository": {
         "type": "git",
@@ -29,6 +29,7 @@
         "@babel/cli": "^7.22.5",
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
-        "@babel/preset-react": "^7.22.5"
+        "@babel/preset-react": "^7.22.5",
+        "cpy-cli": "^4.2.0"
     }
 }
