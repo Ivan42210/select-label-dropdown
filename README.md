@@ -51,7 +51,7 @@ The SelectMenu plugin comes with basic styling. You can customize the appearance
 Feel free to modify and customize these styles to match your desired design. You can override the styles or add your own hover styles as needed.
 
 ```css
-/* Here is the plug-in's basic style. Feel free to customize it as you need */
+/*Here the plug in basic style, feel free to custom it as you need*/
 
 .selector {
     position: relative;
@@ -60,6 +60,7 @@ Feel free to modify and customize these styles to match your desired design. You
 
 .selector-btn {
     padding: 7px;
+    background: whitesmoke;
     border: solid 1px black;
     border-radius: 5px;
     cursor: pointer;
@@ -72,6 +73,8 @@ Feel free to modify and customize these styles to match your desired design. You
     position: absolute;
     z-index: 999;
     width: 100%;
+    background: whitesmoke;
+    border: solid 1px black;
 }
 
 .selector-item {
@@ -83,8 +86,8 @@ Feel free to modify and customize these styles to match your desired design. You
 Make your own hover style here
 
 .selector-item:hover {
-    background: var(--dark);
-    color: var(--light);
+    background: black;
+    color: whitesmoke;
 }*/
 
 .selector-icon {
@@ -94,6 +97,7 @@ Make your own hover style here
     border-right: 8px solid transparent;
     border-top: 8px solid black;
 }
+
 ```
 
 ## Example
