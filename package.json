@@ -5,7 +5,7 @@
     "main": "dist/Selector.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "babel src -d dist && cpy src/Selector.css dist"
+        "build": "babel src/Selector.jsx -o dist/Selector.js && cp src/Selector.css dist/Selector.css"
     },
     "repository": {
         "type": "git",
