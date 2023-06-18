@@ -1,6 +1,3 @@
-Certainly! Here's the complete README in Markdown format:
-
-```markdown
 # SelectMenu Plugin
 
 A simple label plugin with a dropdown menu to select options for forms.
