@@ -2,6 +2,19 @@ import { PropTypes } from 'prop-types'
 import { useState } from 'react';
 import './Selector.css'
 
+/**
+ * SelectMenu Component
+ *
+ * @typedef {Object} SelectMenuProps
+ * @property {string} labelName - The label text for the SelectMenu.
+ * @property {string[]} options - The options to display in the dropdown menu.
+ * @property {Function} onChange - A callback function triggered when an option is selected.
+ *
+ * @param {SelectMenuProps} props - The component props.
+ * @returns {JSX.Element} - The rendered SelectMenu component.
+ */
+
+
 export default function SelectMenu({labelName, options, onChange}){
     const [isOpen, setIsOpen ] = useState(false);
     const [ labelvalue, setlabelValue ] = useState(options[0]);
