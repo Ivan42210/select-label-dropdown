@@ -1,27 +1,34 @@
 {
-  "name": "select-label-dropdown",
-  "version": "1.0.0",
-  "description": "A simple label plugin with a dropdown menu to select options for forms.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ivan42210/select-label-dropdown.git"
-  },
-  "keywords": [
-    "dropdown-label"
-  ],
-  "author": "Ivan Chavaren",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ivan42210/select-label-dropdown/issues"
-  },
-  "homepage": "https://github.com/Ivan42210/select-label-dropdown#readme",
-  "dependencies": {
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+    "name": "select-label-dropdown",
+    "version": "1.0.0",
+    "description": "A simple label plugin with a dropdown menu to select options for forms.",
+    "main": "dist/Selector.jsx",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "babel src -d dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ivan42210/select-label-dropdown.git"
+    },
+    "keywords": [
+        "dropdown-label"
+    ],
+    "author": "Ivan Chavaren",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ivan42210/select-label-dropdown/issues"
+    },
+    "homepage": "https://github.com/Ivan42210/select-label-dropdown#readme",
+    "dependencies": {
+        "prop-types": "^15.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.22.5",
+        "@babel/core": "^7.22.5",
+        "@babel/preset-env": "^7.22.5",
+        "@babel/preset-react": "^7.22.5"
+    }
 }
