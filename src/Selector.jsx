@@ -47,7 +47,7 @@ export default function Selector({labelName, options, onChange}){
   )
 }
 
-SelectMenu.propTypes = {
+Selector.propTypes = {
   labelName: PropTypes.string,
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
