@@ -1,136 +1,134 @@
-# SelectMenu Plugin
+# select-label-dropdown
 
-A simple label plugin with a dropdown menu to select options for forms.
+[![npm version](https://badge.fury.io/js/select-label-dropdown.svg)](https://badge.fury.io/js/select-label-dropdown)
+
+A customizable dropdown component with a label.
 
 ## Installation
 
-You can install the SelectMenu plugin via npm. Run the following command:
+You can install the `select-label-dropdown` package using npm:
 
-```
-npm install select-menu-plugin
+```shell
+npm install select-label-dropdown
 ```
 
 ## Usage
 
-To use the SelectMenu plugin, follow these steps:
-
-1. Import the `SelectMenu` component from the package:
-
-```javascript
-import SelectMenu from 'select-menu-plugin';
-```
-
-2. Use the `SelectMenu` component in your code by providing the necessary props:
-
-```javascript
-<SelectMenu
-  labelName="Select an option"
-  options={['Option 1', 'Option 2', 'Option 3']}
-  onChange={(selectedOption) => console.log(selectedOption)}
-/>
-```
-
-### Props
-
-The `SelectMenu` component accepts the following props:
-
-- `labelName` (string, required): The label text for the SelectMenu.
-- `options` (array of strings, required): The options to display in the dropdown menu.
-- `onChange` (function, required): A callback function triggered when an option is selected. It receives the selected option as a parameter.
-
-## Styling
-
-The SelectMenu plugin comes with basic styling. You can customize the appearance by modifying the CSS classes provided. Here's an explanation of the CSS classes and their styles:
-
-- `.selector`: The container for the SelectMenu component.
-- `.selector-btn`: The style for the label button that triggers the dropdown menu.
-- `.selector-list`: The style for the dropdown menu.
-- `.selector-item`: The style for each item in the dropdown menu.
-- `.selector-icon`: The style for the icon displayed in the label button.
-
-Feel free to modify and customize these styles to match your desired design. You can override the styles or add your own hover styles as needed.
-
-```css
-/*Here the plug in basic style, feel free to custom it as you need*/
-
-.selector {
-    position: relative;
-    height: auto;
-}
-
-.selector-btn {
-    padding: 7px;
-    background: whitesmoke;
-    border: solid 1px black;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.selector-list {
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    background: whitesmoke;
-    border: solid 1px black;
-}
-
-.selector-item {
-    padding: 10px;
-    cursor: pointer;
-}
-
-/*
-Make your own hover style here
-
-.selector-item:hover {
-    background: black;
-    color: whitesmoke;
-}*/
-
-.selector-icon {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid black;
-}
-
-```
-
-## Example
-
-Here's an example of using the SelectMenu plugin:
+To use the `select-label-dropdown` component in your project, import it and render it with the desired props:
 
 ```jsx
-import React from 'react';
-import SelectMenu from 'select-menu-plugin';
+import Selector from 'select-label-dropdown';
 
-const App = () => {
-  const handleOptionChange = (selectedOption) => {
+function App() {
+  const options = ['Option 1', 'Option 2', 'Option 3'];
+
+  const handleChange = (selectedOption) => {
     console.log('Selected option:', selectedOption);
   };
 
   return (
     <div>
-      <h1>My Form</h1>
-      <SelectMenu
-        labelName="Select an option"
-        options={['Option 1', 'Option 2', 'Option 3']}
-        onChange={handleOptionChange}
-      />
+      <h1>Select an option:</h1>
+      <Selector labelName="Select an option" options={options} onChange={handleChange} />
     </div>
   );
-};
+}
 
 export default App;
 ```
 
-## License
+## Props
 
-This plugin is released under the [MIT License](https://opensource.org/licenses/MIT).
+The `select-label-dropdown` component accepts the following props:
+
+| Prop        | Type       | Description                                 |
+| ----------- | ---------- | ------------------------------------------- |
+| labelName   | string     | The label text for the Selector.             |
+| options     | string[]   | The options to display in the dropdown menu. |
+| onChange    | Function   | A callback function triggered when an option is selected. |
+
+## Styling
+
+The `select-label-dropdown` component comes with default styles that you can customize according to your needs. To apply custom styles, import the CSS file and override the desired CSS classes.
+
+Example CSS:
+
+```css
+/* Custom styles for select-label-dropdown */
+.mbic-selector {
+  /* Add your custom styles here */
+}
+
+.mbic-selector-btn {
+  /* Add your custom styles here */
+}
+
+.mbic-selector-list {
+  /* Add your custom styles here */
+}
+
+.mbic-selector-item {
+  /* Add your custom styles here */
+}
+
+.mbic-selector-item:hover {
+  /* Add your custom styles here */
+}
+
+.mbic-selector-icon {
+  /* Add your custom styles here */
+}
 ```
 
-Please note that the styling code provided should be added to your project's CSS file or styled components for the styles to take effect.
+You can import the CSS file in your project as follows:
+
+```jsx
+import 'select-label-dropdown/dist/Selector.css';
+```
+
+Then, update the CSS classes with your desired styles to customize the appearance of the `select-label-dropdown` component.
+
+## Example
+
+Here's an example of customizing the styles of the `select-label-dropdown` component:
+
+```jsx
+import Selector from 'select-label-dropdown';
+import 'select-label-dropdown/dist/Selector.css'; // Import the CSS file
+
+function App() {
+  const options = ['Red', 'Green', 'Blue'];
+
+  const handleChange = (selectedOption) => {
+    console.log('Selected option:', selectedOption);
+  };
+
+  return (
+    <div>
+      <h1>Select a color:</h1>
+      <Selector
+        labelName="Select a color"
+        options={options}
+        onChange={handleChange}
+        className="my-custom-selector" // Apply custom class for additional styling
+      />
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, the `select-label-dropdown` component is customized by applying a custom CSS class `my-custom-selector`. You can then define the styles for this class in your CSS file.
+
+## License
+
+This component is released under the MIT License.
+
+## Contributing
+
+Contributions to the `select-label-dropdown` package are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-repo).
+
+## Credits
+
+The `select-label-dropdown
