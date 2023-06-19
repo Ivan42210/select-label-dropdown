@@ -1,6 +1,6 @@
 {
-    "name": "select-label-dropdown",
-    "version": "1.0.0",
+    "name": "select-label-dropdown-fix",
+    "version": "1.0.2",
     "description": "A simple label plugin with a dropdown menu to select options for forms.",
     "main": "dist/Selector.js",
     "scripts": {
