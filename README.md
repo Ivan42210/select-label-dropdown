@@ -131,4 +131,4 @@ Contributions to the `select-label-dropdown` package are welcome! If you find an
 
 ## Credits
 
-The `select-label-dropdown` by Ivan Chavaren
+The `select-label-dropdown` component is created and maintained by Ivan Chavaren.

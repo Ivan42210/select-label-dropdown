@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types'
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import './Selector.css'
 
 /**
@@ -19,26 +19,25 @@ export default function Selector({labelName, options, onChange}){
     const [isOpen, setIsOpen ] = useState(false);
     const [ labelvalue, setlabelValue ] = useState(options[0]);
 
-    const toggleList = () => {
-      setIsOpen(!isOpen)
-    }
+    const toggleList = () => {setIsOpen(!isOpen)}
 
-    const handleOnClick = (value) =>{
-      setlabelValue(value)
+    const handleOnClick = useCallback((value) => {
+      setlabelValue(value);
       onChange(value);
-      setIsOpen(false)
-    }
+      setIsOpen(false);
+    }, [onChange]);
 
   return(
     <>
       <div className='mbic-selector'> 
           <label  className='mbic-selector-btn' 
                   htmlFor={labelName}
-                  onClick={toggleList}>{labelvalue}<div className='mbic-selector-icon'></div></label>
+                  onClick={toggleList}
+                  aria-label={labelName}>{labelvalue}<div className='mbic-selector-icon'></div></label>
           { isOpen && (
-            <ul className='mbic-selector-list'>
+            <ul className='mbic-selector-list' aria-label={`${labelName} list`}>
               { options.map((option, index) =>(
-              <li key={index} className='mbic-selector-item' onClick={() => {handleOnClick(option)}}>{option}</li>
+              <li key={index} className='mbic-selector-item' onClick={() => {handleOnClick(option)}} aria-label={`${option} option`}>{option}</li>
               ))}
             </ul>
           )}
